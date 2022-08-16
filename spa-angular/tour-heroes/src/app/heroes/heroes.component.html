@@ -1,0 +1,20 @@
+<h2>Today's random hero</h2>
+<!-- {{}} -->
+<!--| uppercase is a pipe -->
+<h2>{{randomHero.name | uppercase}} Details</h2>
+<div><span>id: </span>{{randomHero.id}}</div>
+<div>
+    <label for="name">Hero name: </label>
+    <!-- Two way data-binding -->
+    <input id="name" [(ngModel)]="randomHero.name" placeholder="name">
+</div>
+
+<h2>My Heroes</h2>
+<ul class="heroes">
+    <li *ngFor="let hero of heroes">
+        <button type="button">
+            <span class="badge">{{hero.id}}</span>
+            <span class="name">{{hero.name}}</span>
+        </button>
+    </li>
+</ul>

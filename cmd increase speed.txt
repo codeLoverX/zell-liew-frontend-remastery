@@ -1,0 +1,24 @@
+npx create-new-app causes problem
+// Even for pnpm run this
+npm cache clean --force
+pnpm store prune
+pnpx nest new server
+
+node --max-old-space-size=6000 index.js
+for Javascript:
+node --max-old-space-size=2048 index.js #increase to 2GB
+node --max-old-space-size=3072 index.js #increase to 3GB
+node --max-old-space-size=4096 index.js #increase to 4GB
+node --max-old-space-size=5120 index.js #increase to 5GB
+node --max-old-space-size=6144 index.js #increase to 6GB
+node --max-old-space-size=7168 index.js #increase to 7GB
+node --max-old-space-size=8192 index.js #increase to 8GB
+and if you are running Typescript using ts-node:
+node -r ts-node/register --max-old-space-size=2048 index.ts
+node -r ts-node/register --max-old-space-size=3072 index.ts
+node -r ts-node/register --max-old-space-size=4096 index.ts 
+node -r ts-node/register --max-old-space-size=5120 index.ts 
+node -r ts-node/register --max-old-space-size=6144 index.ts 
+node -r ts-node/register --max-old-space-size=7168 index.ts 
+node -r ts-node/register --max-old-space-size=8192 index.ts
+

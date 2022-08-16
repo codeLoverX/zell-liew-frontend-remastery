@@ -1,0 +1,5 @@
+# no .node_modules file anywhere at all
+# recursive approach to ignore all node_modules present in sub folders
+
+node_modules
+
