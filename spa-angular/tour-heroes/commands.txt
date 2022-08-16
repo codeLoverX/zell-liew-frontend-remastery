@@ -1,0 +1,11 @@
+ng generate component heroes
+ng generate component hero-detail
+ng generate service hero
+ng generate service message
+ng generate component messages
+ng generate module app-routing --flat --module=app
+# --flat	
+# Puts the file in src/app instead of its own directory.
+# --module=app	
+# Tells ng generate to register it in the imports array of the AppModule.
+ng generate component dashboard
