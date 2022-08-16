@@ -1,10 +1,16 @@
-<!-- ng conditional html -->
+<!-- 8. click handler. The click handler onselect  -->
+<!-- <button (click)="onselect" > -->
+<button type="button" (click)="goBack()">go back</button>
+
+<!-- 13. ng conditional html -->
+<!-- 9. hero variable is either nested variable or the route parameter-->
 <div *ngIf="hero">
 
     <h2>{{hero.name | uppercase}} Details</h2>
     <div><span>id: </span>{{hero.id}}</div>
     <div>
         <label for="hero-name">Hero name: </label>
+        <!-- 14. Dealing with forms see later !!! -->
         <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
     </div>
 

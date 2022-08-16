@@ -1,4 +1,13 @@
 <h1>{{title}}</h1>
 <!-- import the hero -->
-<app-heroes></app-heroes>
+<nav>
+    <a routerLink="/heroes">Heroes</a>
+    <a routerLink="/dashboard">Dashboard</a>
+</nav>
+<router-outlet></router-outlet>
+<!-- 1. add the selector of the component to use the component 
+A component is a template/ collection of html, css and js that can be 
+used many times in any app
+-->
+<!-- <app-heroes></app-heroes> -->
 <app-messages></app-messages>

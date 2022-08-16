@@ -1,6 +1,10 @@
+<!-- 3. The html we write here
+Difference is we can write a bit of JS here too inside the html
+-->
+
 <h2>Today's random hero</h2>
-<!-- {{}} -->
-<!--| uppercase is a pipe -->
+<!-- 4. {{}} allows us to insert JS Variables-->
+<!-- 5. | uppercase is a pipe. Pipes are very useful -->
 <div class="heroes" type="button">
     <span class="badge">{{randomHero.id}}</span>
     <span class="name">{{randomHero.name}}</span>
@@ -9,16 +13,22 @@
 
 <h2>My Heroes</h2>
 <ul class="heroes">
-    <!-- ng for-loop -->
+    <!-- 6. ng for-loop directive -->
     <li *ngFor="let hero of heroes">
-        <!-- conditional class and class binding -->
-        <!-- click handler -->
+        <!-- 7. conditional class and class binding -->
+        <!-- 8. click handler. The click handler is usually written  -->
         <button [class.selected]="hero === selectedHero" type="button" (click)="onSelect(hero)">
             <span class="badge">{{hero.id}}</span>
             <span class="name">{{hero.name}}</span>
+            <span class="badge2">
+                <a routerLink="/detail/{{hero.id}}">
+                    New page
+                </a>
+            </span>
         </button>
+       
     </li>
 </ul>
 
-<!-- property bindng and nested component -->
+<!-- 9. property bindng and nested component -->
 <app-hero-detail [hero]="selectedHero"></app-hero-detail>
