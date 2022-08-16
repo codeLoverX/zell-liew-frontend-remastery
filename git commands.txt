@@ -1,3 +1,4 @@
+First push:
 echo "# zell-liew-frontend-remastery" >> README.md
 git init
 git add README.md
@@ -6,6 +7,7 @@ git branch -M main
 git remote add origin https://github.com/codeLoverX/zell-liew-frontend-remastery.git
 git push -u origin main
 
+Any edits:
 git pull
 git add .
 git commit -am "add all"

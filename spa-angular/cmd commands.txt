@@ -1,0 +1,17 @@
+npx create-new-app uses store/ cache a lot taking huge amounts of time for (p)npm install
+// Even for pnpm run this
+npm cache clean --force
+pnpm store prune
+pnpx nest new server
+ng new tour-heroes --skip-install
+cd tour-heroes
+rimraf node_modules
+ng config cli.packageManager pnpm
+pnpm install --shamefully-hoist
+ng serve --open
+
+Don't remove the .pnpm-store folder. Only remove node_modules if you want to.
+Try to run pnpm install --shamefully-hoist. If it helps, you can create a .npmrc
+file in the root of your project with shamefully-hoist=true.
+The issue is that pnpm creates a strict node_modules and sometimes packages require other 
+packages that are not declared in their package.json. See pnpm’s strictness helps to avoid silly bugs
