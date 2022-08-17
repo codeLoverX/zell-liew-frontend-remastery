@@ -3,12 +3,13 @@ import { Injectable } from '@angular/core';
 import { Observable, of, filter, mergeMap } from 'rxjs';
 import { Hero } from '../data/hero.interface';
 import { HEROES } from '../data/mock-heroes';
+import { HeroesModule } from '../heroes.module';
 import { MessageService } from './message.service';
 
 // import { MessageService } from './message.service';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class HeroService {
 
