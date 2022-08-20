@@ -6,8 +6,6 @@ import { HEROES } from '../data/mock-heroes';
 import { HeroesModule } from '../heroes.module';
 import { MessageService } from './message.service';
 
-// import { MessageService } from './message.service';
-
 @Injectable({
   providedIn: 'root'
 })

@@ -1,0 +1,10 @@
+<div *ngIf="this.isInput">
+    <p>{{name}}, {{age}} years old</p>
+</div>
+
+<div *ngIf="!this.isInput">
+    <label>Add a Musician:
+        <input #newArtist >
+    </label>
+    <button type="button" (click)="addNewArtist(newArtist.value)">Add to parent's musician list</button>
+</div>

@@ -1,0 +1,43 @@
+<h3>Using form builder</h3>
+
+<form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+    <div>
+        <label>
+            Name:
+            <input formControlName="name2" placeholder="Your name">
+        </label>
+        <div *ngIf="
+            myForm.get('name2')?.invalid && 
+            (myForm.get('name2')?.dirty || 
+            myForm.get('name2')?.touched)">
+            Please provide a name.
+        </div>
+    </div>
+    <div>
+        <label>
+            Email:
+            <input formControlName="email2" placeholder="Your email">
+        </label>
+        <div *ngIf="
+            myForm.get('email2')?.invalid && 
+            (myForm.get('email2')?.dirty || 
+            myForm.get('email2')?.touched)">
+            Please provide a valid email address.
+        </div>
+    </div>
+    <div>
+        <label>
+            Message:
+            <input formControlName="message2" placeholder="Your message">
+        </label>
+        <div *ngIf="
+            myForm.get('message2')?.invalid && 
+            myForm.get('message2')?.dirty ||
+            myForm.get('message2')?.touched">
+            Messages must be at least 15 characters long.
+        </div>
+    </div>
+    <br>
+    <button type="submit" [disabled]="myForm.invalid">Send</button>
+    <!--  -->
+</form>

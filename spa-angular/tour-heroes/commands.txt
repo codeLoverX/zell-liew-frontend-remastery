@@ -9,3 +9,13 @@ ng generate module app-routing --flat --module=app
 # --module=app	
 # Tells ng generate to register it in the imports array of the AppModule.
 ng generate component dashboard
+ng generate module heroes
+ng generate module templates
+ng generate module components
+ng generate module directives
+ng generate component templates/intro --module=templates/templates.module.ts
+ng generate component templates/nested --module=templates/templates.module.ts
+ng generate component components/reactive-forms --module=components/components.module.ts
+ng generate component directives/directives --module=directives/directives.module.ts
+ng generate module ngrx-1-store
+ng generate component ngrx-1-store/basics --module=ngrx-1-store/ngrx-1-store.module.ts

@@ -1,0 +1,28 @@
+<!--
+The different types of Angular directives are as follows:
+
+DIRECTIVE TYPES	DETAILS
+Components
+Attribute directives	
+Structural directives	
+
+ -->
+
+<!-- toggle the "special" class on/off with a property -->
+
+<!-- Attribute directives	 -->
+
+<!-- [ngClass] -->
+<div [ngClass]="isSpecial ? 'special' : ''">This div is special</div>
+<div [ngClass]="currentClasses">This div is not special.</div>
+<div>
+    <button (click)="changeClass()">Make it special</button>
+</div>
+
+<!-- [ngStyle] -->
+<div [ngStyle]="currentStyles">This div is not normal.</div>
+<div>
+    <button (click)="changeStyle()">Make it normal</button>
+</div>
+
+<!-- ngModel : in templates (2-way binding) and template driven forms -->

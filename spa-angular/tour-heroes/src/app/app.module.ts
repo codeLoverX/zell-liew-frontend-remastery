@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HeroesModule } from './heroes/heroes.module';
 import { HeroService } from './heroes/services/hero.service';
+import { TemplatesModule } from './templates/templates.module';
+import { ComponentsModule } from './components/components.module';
+import { DirectivesModule } from './directives/directives.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,9 +20,13 @@ import { HeroService } from './heroes/services/hero.service';
     AppRoutingModule,
     // to get a component from module import the module
     HeroesModule,
+    // All modules must be declared at AppModule or Routing will fail
+    TemplatesModule,
+    ComponentsModule,
+    DirectivesModule
   ],
   providers: [
-    HeroService
+    
   ],
   bootstrap: [AppComponent]
 })

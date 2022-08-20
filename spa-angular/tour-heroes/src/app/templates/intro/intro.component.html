@@ -1,0 +1,40 @@
+<!-- 
+A. One way DOWN the tree: from source to view {{}} AND []
+
+A1. Interpolation refers to embedding expressions into marked up text. 
+ By default, interpolation uses the double curly braces {{ and }} as delimiters. -->
+<h3>Current customer: {{ currentCustomer }}</h3>
+<!-- 
+A2. Property binding
+
+A2a) Element property
+ -->
+<input [value]="currentCustomer" />
+
+<!-- A2b) Component property: Parent to child -->
+<app-nested [age]="age" [aliasName]="currentCustomer"></app-nested>
+<!-- A2c) Directive property -->
+<div [ngClass]="{'special': isSpecial}"></div>
+
+<!-- B. Event binding/ One way UP the tree:  -->
+<!-- B1. from view to source normal event binding -->
+<h3>Add new customer, default: 'John'</h3>
+<input [value]="newPerson" (input)="onInput($event)">
+<p>Now value is {{newPerson}}</p>
+<!-- B2. Component event binding: From child component to parent {{}} -->
+<h3>Add new musician</h3>
+<app-nested (newMusicianEvent)="addArtists($event)"></app-nested>
+<ul>
+    <li *ngFor="let musician of musicians">{{musician}}</li>
+</ul>
+
+<!-- C. Two way: from view to source {{}} -->
+<!-- [value]="newPerson" (input)="onInput($event) is merged together by [(ngModel)]
+    for small forms:
+    (input)="onInput($event) the onInput() function is simple and only changes the variable
+-->
+<h3>Add new customer, default: ''</h3>
+<input [(ngModel)]="ngModelTwoWay">
+<p>Now value is {{ngModelTwoWay}}</p>
+
+<!-- A1 VS A2 -->
