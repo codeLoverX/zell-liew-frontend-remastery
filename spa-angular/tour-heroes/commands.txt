@@ -18,4 +18,17 @@ ng generate component templates/nested --module=templates/templates.module.ts
 ng generate component components/reactive-forms --module=components/components.module.ts
 ng generate component directives/directives --module=directives/directives.module.ts
 ng generate module ngrx-1-store
-ng generate component ngrx-1-store/basics --module=ngrx-1-store/ngrx-1-store.module.ts
+ng generate module htpp-crud
+
+ng generate component ngrx-1-store/basics --module=http-crud/http-crud.module.ts
+ng generate component http-crud/allEmployee --module=http-crud/http-crud.module.ts
+ng generate component http-crud/addEmployee --module=http-crud/http-crud.module.ts
+ng generate component http-crud/editEmployee --module=http-crud/http-crud.module.ts
+ng generate component http-crud/viewEmployee --module=http-crud/http-crud.module.ts
+ng generate service http-crud/service/WebApi
+ng generate service http-crud/service/HttpProvider
+
+ng add @ng-bootstrap/ng-bootstrap
+pnpm install @ng-bootstrap/ng-bootstrap --save
+pnpm install ngx-toastr --save
+pnpm install @angular/animations –-save

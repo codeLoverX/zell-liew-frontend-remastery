@@ -7,6 +7,10 @@ import { HeroDetailComponent } from './heroes/hero-detail/hero-detail.component'
 import { IntroComponent } from './templates/intro/intro.component';
 import { ReactiveFormsComponent } from './components/reactive-forms/reactive-forms.component';
 import { DirectivesComponent } from './directives/directives/directives.component';
+import { AddEmployeeComponent } from './http-crud/add-employee/add-employee.component';
+import { AllEmployeeComponent } from './http-crud/all-employee/all-employee.component';
+import { EditEmployeeComponent } from './http-crud/edit-employee/edit-employee.component';
+import { ViewEmployeeComponent } from './http-crud/view-employee/view-employee.component';
 
 const routes: Routes = [
   // reroute starting module
@@ -19,8 +23,14 @@ const routes: Routes = [
   { path: 'intro', component: IntroComponent },
   // components module
   { path: 'reactive-forms', component: ReactiveFormsComponent },
-  // / directives module
+  //  directives module
   { path: 'directives', component: DirectivesComponent },
+ //  http-crud module
+ { path: 'addEmployee', component: AddEmployeeComponent },
+ { path: 'allEmployee', component: AllEmployeeComponent },
+ { path: 'editEmployee', component: EditEmployeeComponent },
+ { path: 'viewEmployee', component: ViewEmployeeComponent },
+ 
 
 
 ];

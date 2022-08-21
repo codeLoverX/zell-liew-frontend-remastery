@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        
+        .sidepanel {
+
+            /* animation 
+            width is core of animation. // change width to display 
+            document.getElementById("mySidepanel").style.width = "250px";
+            */
+            transition: 0.5s;
+            width: 0;
+
+            /* layout
+ position fixed pulls up the element below? */
+
+            z-index: 1;
+            position: fixed;
+            top: 0;
+            left: 0;
+            overflow-x: hidden;
+
+            /* creating room inside carousel */
+            padding-top: 60px;
+            height: 250px;
+            background-color: black;
+        }
+
+        .sidepanel a {
+
+            /* shit all hyperlinks have some css
+            use descendant selector            
+            give padding, decoration, transition!!!
+            */
+
+            padding: 8px 8px 8px 32px;
+            transition: 1.5s;
+            display: block;
+            color: white;
+            text-decoration: none;
+        }
+
+        .sidepanel a:hover {
+            color: salmon;
+        }
+
+        .sidepanel .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+        }
+
+        
+
+    </style>
+</head>
+
+<body>
+
+    <div id="mySidepanel" style="font-size: 20px;" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <button class="openbtn" style="font-size: 20px;" onclick="openNav()">☰ Toggle Sidepanel</button>
+
+    <script>
+        function openNav() {
+            // change width to display
+            document.getElementById("mySidepanel").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidepanel").style.width = "0";
+        }
+    </script>
+
+</body>
+
+</html>
