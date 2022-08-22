@@ -21,6 +21,8 @@ const routes: Routes = [
   { path: 'detail/:id', component: HeroDetailComponent },
   // templates module
   { path: 'intro', component: IntroComponent },
+  { path: 'if', component: IntroComponent },
+
   // components module
   { path: 'reactive-forms', component: ReactiveFormsComponent },
   //  directives module
