@@ -33,8 +33,9 @@ ng generate service http-crud/service/HttpProvider
 # @import "~bootstrap/dist/css/bootstrap.css";
 # @import "~bootstrap-icons/font/bootstrap-icons.css";
 pnpm install bootstrap @ng-bootstrap/ng-bootstrap --save
-pnpm install ngx-toastr --save
-pnpm install @angular/animations –-save
+pnpm install --save ngx-toastr 
+pnpm install –-save @angular/animations 
+pnpm install --save font-awesome 
 
 npm install -D @angular-builders/custom-webpack postcss-scss @fullhuman/postcss-purgecss
 

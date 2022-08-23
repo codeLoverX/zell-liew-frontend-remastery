@@ -18,7 +18,7 @@ specifiers:
   '@types/node': ^12.11.1
   angular-bootstrap-datetimepicker: ^4.0.2
   bootstrap: ^5.2.0
-  bootstrap-icons: ^1.9.1
+  font-awesome: ^4.7.0
   jasmine-core: ~3.10.0
   karma: ~6.3.0
   karma-chrome-launcher: ~3.1.0
@@ -44,7 +44,7 @@ dependencies:
   '@popperjs/core': 2.11.6
   angular-bootstrap-datetimepicker: 4.0.2_7444d20c58ad5c3ecf7f146ec9e7fada
   bootstrap: 5.2.0_@popperjs+core@2.11.6
-  bootstrap-icons: 1.9.1
+  font-awesome: 4.7.0
   ngx-toastr: 15.0.0_c467e77966038277344d513540c09b64
   rxjs: 7.4.0
   tslib: 2.4.0
@@ -2422,10 +2422,6 @@ packages:
     resolution: {integrity: sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==}
     dev: true
 
-  /bootstrap-icons/1.9.1:
-    resolution: {integrity: sha512-d4ZkO30MIkAhQ2nNRJqKXJVEQorALGbLWTuRxyCTJF96lRIV6imcgMehWGJUiJMJhglN0o2tqLIeDnMdiQEE9g==}
-    dev: false
-
   /bootstrap/5.2.0_@popperjs+core@2.11.6:
     resolution: {integrity: sha512-qlnS9GL6YZE6Wnef46GxGv1UpGGzAwO0aPL1yOjzDIJpeApeMvqV24iL+pjr2kU4dduoBA9fINKWKgMToobx9A==}
     peerDependencies:
@@ -3620,6 +3616,11 @@ packages:
       debug:
         optional: true
     dev: true
+
+  /font-awesome/4.7.0:
+    resolution: {integrity: sha512-U6kGnykA/6bFmg1M/oT9EkFeIYv7JlX3bozwQJWiiLz6L0w3F5vBVPxHlwyX/vtNq1ckcpRKOB9f2Qal/VtFpg==}
+    engines: {node: '>=0.10.3'}
+    dev: false
 
   /forwarded/0.2.0:
     resolution: {integrity: sha512-buRG0fpBtRHSTCOASe6hD258tEubFoRLb4ZNA6NxMVHNw2gOcwHo9wyablzMzOA5z9xA9L1KNjk/Nt6MT9aYow==}

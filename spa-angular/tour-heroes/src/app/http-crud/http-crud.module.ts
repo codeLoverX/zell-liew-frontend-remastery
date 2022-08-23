@@ -9,7 +9,7 @@ import { WebApiService } from './service/web-api.service';
 import { AppRoutingModule } from '../app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -26,7 +26,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    NgbModule
+    // Angular components
+    NgbAccordionModule
   ],
   exports: [
     AllEmployeeComponent,

@@ -11,13 +11,12 @@ import { TemplatesModule } from './templates/templates.module';
 import { ComponentsModule } from './components/components.module';
 import { DirectivesModule } from './directives/directives.module';
 import { HttpCrudModule } from './http-crud/http-crud.module';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
   ],
   imports: [
-    NgbModule,
+    // NgbModule,
     // styling by bootstrap
     BrowserModule,
     // contains ng-module directive to use in html
