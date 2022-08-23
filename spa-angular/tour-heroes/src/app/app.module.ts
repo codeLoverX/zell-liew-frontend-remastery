@@ -17,8 +17,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AppComponent,
   ],
   imports: [
-    // styling
     NgbModule,
+    // styling by bootstrap
     BrowserModule,
     // contains ng-module directive to use in html
     AppRoutingModule,

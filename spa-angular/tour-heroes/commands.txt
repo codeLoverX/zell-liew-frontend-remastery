@@ -30,7 +30,81 @@ ng generate component http-crud/viewEmployee --module=http-crud/http-crud.module
 ng generate service http-crud/service/WebApi
 ng generate service http-crud/service/HttpProvider
 
-ng add @ng-bootstrap/ng-bootstrap
-pnpm install @ng-bootstrap/ng-bootstrap --save
+# @import "~bootstrap/dist/css/bootstrap.css";
+# @import "~bootstrap-icons/font/bootstrap-icons.css";
+pnpm install bootstrap @ng-bootstrap/ng-bootstrap --save
 pnpm install ngx-toastr --save
 pnpm install @angular/animations –-save
+
+npm install -D @angular-builders/custom-webpack postcss-scss @fullhuman/postcss-purgecss
+
+Then create a webpack.config.js config file:
+
+const purgecss = require('@fullhuman/postcss-purgecss')
+
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.scss$/,
+        loader: 'postcss-loader',
+        options: {
+          ident: 'postcss',
+          syntax: 'postcss-scss',
+          plugins: () => [
+            require('postcss-import'),
+            require('autoprefixer'),
+            purgecss({
+              content: ['./**/*.html'],
+              // Example to let PurgeCss know how to exclude cdk and mat prefixes if your using Angular CDK and Angular Material
+              whitelistPatterns: [/^cdk-|mat-/]
+            })
+          ]
+        }
+      }
+    ]
+  }
+};
+Then change your angular.json file to use this new configurations:
+
+...
+"build": {
+  "builder": "@angular-builders/custom-webpack:browser",
+  "options": {
+    "customWebpackConfig": {
+      "path": "webpack.config.js"
+    },
+    ...
+  }
+},
+...
+
+19
+
++50
+I created this bash script to use PurgeCSS with my Angular app. It reduced my 'styles.css' file size from 63kb to only 3kb! Hope it works for you too.
+
+Steps:
+
+create a new file named purgecss.sh inside your project folder
+insert the code below into purgecss.sh file
+run ./purgecss.sh from CLI
+#!/bin/bash
+
+# run production build
+ng build --prod --output-hashing none
+
+# go to the dist/yourProjectName folder
+cd ./dist/yourProjectName
+
+# make a new directory named 'css' (you can name it anything)
+mkdir css
+
+# run PurgeCSS & make a new '.css' file inside the 'css' directory
+purgecss --css ./styles.css --content ./index.html ./*.js --out ./css
+
+# replace the 'dist/yourProjectName/styles.css' file with the 'dist/yourProjectName/css/styles.css' file
+mv ./css/styles.css ./styles.css
+
+# delete the previously created 'css' directory
+rm -r css
